@@ -1,0 +1,8 @@
+data/color_images/
+data/images_all/
+data/summaries_all
+data/test/
+results/test_out
+results/test_out.zip
+src/imagej/single_image_example
+
