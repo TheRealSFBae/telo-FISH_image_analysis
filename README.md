@@ -7,10 +7,10 @@ Finally - a way to spend the time you once spent in MetaMorph doing other things
 
 This software is written to segment nuclei of interest in telo-FISH fluorescent microscopy images. The general rule system is as follows, _per-image_:
 
-1. Open merged (color, all-channel) .JPG of collected microscopy images
+1. Open merged (color, all-channel) .jpg of collected microscopy images
 2. Split channels into seperate monochrome versions
 3. Select potential nuclear ROIs in DAPI (blue) channel
-4. Identify "true: ROIs in GFP (green) channel
+4. Identify "true" ROIs in GFP (green) channel
 5. Measure telomere staining intensity in RFP (red) channel
 6. Output .csv of mean gray value telomere measurements and a .png of original image + final nuclear selections
 
