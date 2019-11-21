@@ -22,7 +22,7 @@ function processFolder(input) {
 function segmenter(input, output, file) {
 	open(input + "/" +  file);
 	selectWindow(file);
-	imageTitle = getTitleStripExtension();
+	imageTitle = File.nameWithoutExtension;
 	run("Duplicate...", " ");
 	run("Split Channels");
 	run("Gaussian Blur...", "sigma=2");
@@ -74,26 +74,4 @@ function segmenter(input, output, file) {
 	selectWindow("Log");
 	saveAs("Text", output + "/" + imageTitle + "_log.csv");
 
-}
-
-// function to strip file extensions from image titles
-function getTitleStripExtension() { 
-  t = getTitle(); 
-  t = replace(t, ".jpg", "");
-  t = replace(t, ".JPG", "");
-  t = replace(t, ".jpeg", "");
-  t = replace(t, ".JPEG", "");
-  t = replace(t, ".tif", "");
-  t = replace(t, ".TIF", "");           
-  t = replace(t, ".tiff", "");
-  t = replace(t, ".TIFF", "");       
-  t = replace(t, ".lif", "");
-  t = replace(t, ".LIF", "");       
-  t = replace(t, ".lsm", "");
-  t = replace(t, ".LSM", "");     
-  t = replace(t, ".czi", "");
-  t = replace(t, ".CZI", "");       
-  t = replace(t, ".nd2", "");
-  t = replace(t, ".ND2", "");     
-  return t; 
-} 
+}
